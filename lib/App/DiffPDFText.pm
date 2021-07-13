@@ -1,4 +1,4 @@
-package App::DiffDocText;
+package App::DiffPDFText;
 
 # AUTHORITY
 # DATE
@@ -6,10 +6,10 @@ package App::DiffDocText;
 # VERSION
 
 1;
-# ABSTRACT: Diff the text of two Office word-processor documents (.doc, .docx, .odt, etc)
+# ABSTRACT: Diff the text of two PDF documents
 
 =head1 SYNOPSIS
 
-See the included script L<diff-doc-text>.
+See the included script L<diff-pdf-text>.
 
 =cut
