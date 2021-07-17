@@ -22,10 +22,12 @@ my @files;
 Getopt::Long::Configure("gnu_getopt", "no_ignore_case", "pass_through");
 
 my $fail;
+my $opt_pages;
 
 GetOptionsCLIWrapper(
     cli => 'diff',
     add_opts => {
+        'pdf-pages=s' => \$opt_pages,
         '<>' => sub {
             my $filename = $_[0];
             unless (-f $filename) {
@@ -39,6 +41,7 @@ GetOptionsCLIWrapper(
                 file => $filename,
                 fmt => 1,
                 return_output_file => 1,
+                (defined $opt_pages ? (pages => $opt_pages) : ()),
             );
             my $file;
             if ($res->[0] == 304) {
@@ -93,6 +96,11 @@ B<diff>.
 B<Please specify these options before file names.>
 
 =over
+
+=item * --pdf-pages
+
+Only diff a range of pages instead of the whole PDF. Example: 1,5-10,15.
+Requires B<pdftk> to extract the page range.
 
 =back
 
