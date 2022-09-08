@@ -1,5 +1,7 @@
 package App::DiffPDFText;
 
+use strict;
+
 # AUTHORITY
 # DATE
 # DIST
