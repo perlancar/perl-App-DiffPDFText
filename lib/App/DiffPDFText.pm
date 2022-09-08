@@ -14,4 +14,11 @@ use strict;
 
 See the included script L<diff-pdf-text>.
 
+
+=head1 SEE ALSO
+
+L<App::DiffDocText>
+
+L<App::DiffXlsText>
+
 =cut

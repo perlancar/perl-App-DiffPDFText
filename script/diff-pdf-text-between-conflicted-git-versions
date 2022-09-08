@@ -68,7 +68,7 @@ system(
     $path_ours, $path_theirs,
 );
 
-# ABSTRACT: Diff the text of two PDF files between conflicted git versions
+# ABSTRACT: Diff the text of PDF file between conflicted git versions
 # PODNAME:
 
 =head1 SYNOPSIS
